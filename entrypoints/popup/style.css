@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: #8B5CF6; /* Default Violet */
+    --brand-bg-primary: #8B5CF6;
+  }
+  
+  body.theme-youtube {
+    --brand-primary: #EF4444; /* YouTube Red */
+    --brand-bg-primary: #EF4444;
+  }
+  
+  body.theme-twitch {
+    --brand-primary: #9146FF; /* Twitch Purple */
+    --brand-bg-primary: #9146FF;
+  }
+}
+
+/* Extension popup root styles */
+html {
+  width: 360px;
+  min-height: 200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0F0F0F;
+  color: #F1F1F1;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Number input: hide spinners */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
